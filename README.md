@@ -6,12 +6,12 @@
 
 Find broad IAM policy statements before cloud access is merged. It solves review drift by turning plain-text plans into deterministic CI-friendly findings.
 
-## Input Contract 5
+## Input Contract
 
 Accepts IAM policy snippet. The reader supports plain text, JSON, JSONL, and CSV so the
 tool can fit into scripts, CI jobs, and review exports.
 
-## CLI Walkthrough 5
+## CLI Walkthrough
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -20,7 +20,7 @@ iam-policy-minimizer examples/sample.txt --json --fail-on medium
 python -m iam_policy_minimizer --help
 ```
 
-## Rule Surface 5
+## Rule Surface
 
 | Rule | Severity | Meaning |
 |---|---:|---|
@@ -28,7 +28,7 @@ python -m iam_policy_minimizer --help
 | `wildcard-resource` | medium | wildcard resource detected |
 | `allow-effect` | low | allow statement present |
 
-## Validation Notes 5
+## Validation Notes
 
 ```bash
 ruff check .
