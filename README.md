@@ -1,29 +1,12 @@
-# IAM Policy Minimizer
+# Iam Policy Minimizer
 
-| Detail | Value |
-| --- | --- |
-| Area | delivery |
-| Entry | `iam-policy-minimizer` |
-| Input | plain text |
-| Output | terminal findings, optional JSON |
+![Iam Policy Minimizer cover](assets/readme-cover.svg)
 
-![IAM Policy Minimizer cover](assets/readme-cover.svg)
+Find broad IAM policy statements before cloud access is merged.
 
-## Use it when
+`Python`
 
-This repository turns a tiny plain text into reviewable signals for cloud security.
-
-## Finding map
-
-![Workflow diagram](assets/readme-diagram.svg)
-
-## Signals
-
-- `wildcard-action` - wildcard action detected (high); replace with explicit actions.
-- `wildcard-resource` - wildcard resource detected (medium); scope resources tightly.
-- `allow-effect` - allow statement present (low); verify this allow is required.
-
-## Try the fixture
+## Start here
 
 ```bash
 git clone https://github.com/mertefekurt/iam-policy-minimizer.git
@@ -31,3 +14,9 @@ cd iam-policy-minimizer
 python -m pip install -e ".[dev]"
 iam-policy-minimizer examples/sample.txt
 ```
+
+## Repository
+
+[Open the source on GitHub →](https://github.com/mertefekurt/iam-policy-minimizer)
+
+[MIT License](LICENSE)
